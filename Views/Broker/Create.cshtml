@@ -1,0 +1,54 @@
+@model PortalInmobiliario.Models.Inmueble
+@using PortalInmobiliario.Models
+@{
+    ViewData["Title"] = "Crear inmueble";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row g-2">
+        <div class="col-md-3">
+            <label class="form-label">Código</label>
+            <input class="form-control" asp-for="Codigo" />
+            <span class="text-danger" asp-validation-for="Codigo"></span>
+        </div>
+        <div class="col-md-5">
+            <label class="form-label">Título</label>
+            <input class="form-control" asp-for="Titulo" />
+            <span class="text-danger" asp-validation-for="Titulo"></span>
+        </div>
+        <div class="col-md-4">
+            <label class="form-label">Imagen (URL)</label>
+            <input class="form-control" asp-for="Imagen" />
+        </div>
+
+        <div class="col-md-3">
+            <label class="form-label">Tipo</label>
+            <select class="form-select" asp-for="Tipo" asp-items="Html.GetEnumSelectList<TipoInmueble>()"></select>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Ciudad</label>
+            <input class="form-control" asp-for="Ciudad" />
+        </div>
+        <div class="col-md-6">
+            <label class="form-label">Dirección</label>
+            <input class="form-control" asp-for="Direccion" />
+        </div>
+
+        <div class="col-md-2"><label class="form-label">Dormitorios</label><input class="form-control" asp-for="Dormitorios" /></div>
+        <div class="col-md-2"><label class="form-label">Baños</label><input class="form-control" asp-for="Banos" /></div>
+        <div class="col-md-2"><label class="form-label">m²</label><input class="form-control" asp-for="MetrosCuadrados" /></div>
+        <div class="col-md-3"><label class="form-label">Precio</label><input class="form-control" asp-for="Precio" /></div>
+        <div class="col-md-3 form-check mt-4 ms-2">
+            <input class="form-check-input" asp-for="Activo" />
+            <label class="form-check-label">Activo</label>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <button class="btn btn-primary">Guardar</button>
+        <a asp-action="Index" class="btn btn-secondary">Volver</a>
+    </div>
+</form>

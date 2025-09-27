@@ -1,0 +1,27 @@
+@model List<PortalInmobiliario.Models.Reserva>
+@{
+    ViewData["Title"] = "Reservas activas";
+}
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr><th>Inmueble</th><th>Creación (UTC)</th><th>Expira (UTC)</th><th></th></tr>
+    </thead>
+    <tbody>
+    @foreach (var r in Model)
+    {
+        <tr>
+            <td>@r.Inmueble.Titulo (@r.Inmueble.Ciudad)</td>
+            <td>@r.FechaCreacion</td>
+            <td>@r.FechaExpiracion</td>
+            <td>
+                <form asp-action="LiberarReserva" method="post">
+                    <input type="hidden" name="id" value="@r.Id" />
+                    <button class="btn btn-sm btn-warning">Liberar</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

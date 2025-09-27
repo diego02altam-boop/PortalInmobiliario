@@ -34,11 +34,11 @@ public class InmueblesController : Controller
         {
             var q = _db.Inmuebles.AsNoTracking().Where(i => i.Activo);
 
-            if (!string.IsNullOrWhiteSpace(f.Ciudad))    q = q.Where(i => i.Ciudad == f.Ciudad);
-            if (f.Tipo.HasValue)                          q = q.Where(i => i.Tipo == f.Tipo);
-            if (f.PrecioMin.HasValue)                     q = q.Where(i => i.Precio >= f.PrecioMin);
-            if (f.PrecioMax.HasValue)                     q = q.Where(i => i.Precio <= f.PrecioMax);
-            if (f.Dormitorios.HasValue)                   q = q.Where(i => i.Dormitorios >= f.Dormitorios);
+            if (!string.IsNullOrWhiteSpace(f.Ciudad)) q = q.Where(i => i.Ciudad == f.Ciudad);
+            if (f.Tipo.HasValue) q = q.Where(i => i.Tipo == f.Tipo);
+            if (f.PrecioMin.HasValue) q = q.Where(i => i.Precio >= f.PrecioMin);
+            if (f.PrecioMax.HasValue) q = q.Where(i => i.Precio <= f.PrecioMax);
+            if (f.Dormitorios.HasValue) q = q.Where(i => i.Dormitorios >= f.Dormitorios);
 
             var total = await q.CountAsync();
 
@@ -75,4 +75,6 @@ public class InmueblesController : Controller
         HttpContext.Session.SetInt32("UltimoInmuebleId", id);
         return View(inm);
     }
+
+
 }

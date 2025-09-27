@@ -1,0 +1,26 @@
+@model List<PortalInmobiliario.Models.Visita>
+@{
+    ViewData["Title"] = "Agenda de hoy";
+}
+<h2>@ViewData["Title"]</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr><th>Inmueble</th><th>Inicio</th><th>Fin</th><th>Estado</th><th></th></tr>
+    </thead>
+    <tbody>
+    @foreach (var v in Model)
+    {
+        <tr>
+            <td>@v.Inmueble.Titulo (@v.Inmueble.Ciudad)</td>
+            <td>@v.FechaInicio</td>
+            <td>@v.FechaFin</td>
+            <td>@v.Estado</td>
+            <td class="d-flex gap-2">
+                <form asp-action="ConfirmarVisita" method="post"><input type="hidden" name="id" value="@v.Id" /><button class="btn btn-sm btn-success">Confirmar</button></form>
+                <form asp-action="CancelarVisita" method="post"><input type="hidden" name="id" value="@v.Id" /><button class="btn btn-sm btn-danger">Cancelar</button></form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

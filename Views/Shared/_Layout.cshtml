@@ -11,6 +11,13 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            @if (User.IsInRole("Broker"))
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Broker" asp-action="Index">Broker</a>
+    </li>
+}
+
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PortalInmobiliario</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"

@@ -1,0 +1,38 @@
+@model List<PortalInmobiliario.Models.Inmueble>
+@{
+    ViewData["Title"] = "Inmuebles";
+}
+<h2>Inmuebles</h2>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Nuevo</a>
+    <a class="btn btn-outline-secondary" asp-action="AgendaHoy">Agenda hoy</a>
+    <a class="btn btn-outline-secondary" asp-action="ReservasActivas">Reservas activas</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Activo</th><th>Código</th><th>Título</th><th>Ciudad</th><th>Precio</th><th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>
+                <form asp-action="Toggle" method="post">
+                    <input type="hidden" name="id" value="@i.Id" />
+                    <button class="btn btn-sm @(i.Activo?"btn-success":"btn-secondary")">
+                        @(i.Activo?"Activo":"Inactivo")
+                    </button>
+                </form>
+            </td>
+            <td>@i.Codigo</td>
+            <td>@i.Titulo</td>
+            <td>@i.Ciudad</td>
+            <td>@i.Precio.ToString("C0")</td>
+            <td><a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@i.Id">Editar</a></td>
+        </tr>
+    }
+    </tbody>
+</table>
