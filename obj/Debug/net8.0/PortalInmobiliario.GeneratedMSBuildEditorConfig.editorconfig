@@ -17,75 +17,75 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PortalInmobiliario
 build_property.RootNamespace = PortalInmobiliario
-build_property.ProjectDir = c:\Users\hp\OneDrive\Escritorio\SEGUNDA_PROGRA\PortalInmobiliario\PortalInmobiliario\
+build_property.ProjectDir = C:\Users\hp\OneDrive\Escritorio\SEGUNDA_PROGRA\PortalInmobiliario\PortalInmobiliario\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\hp\OneDrive\Escritorio\SEGUNDA_PROGRA\PortalInmobiliario\PortalInmobiliario
+build_property.MSBuildProjectDirectory = C:\Users\hp\OneDrive\Escritorio\SEGUNDA_PROGRA\PortalInmobiliario\PortalInmobiliario
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/AgendaHoy.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/AgendaHoy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXEFnZW5kYUhveS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/Create.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/Edit.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/Index.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/ReservasActivas.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Broker/ReservasActivas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJva2VyXFJlc2VydmFzQWN0aXZhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Home/Index.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Home/Privacy.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Inmuebles/Details.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Inmuebles/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Inmuebles/Index.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Inmuebles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5tdWVibGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/Error.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/_ViewImports.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/_ViewStart.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/_Layout.cshtml]
+[C:/Users/hp/OneDrive/Escritorio/SEGUNDA_PROGRA/PortalInmobiliario/PortalInmobiliario/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-mena2h933q
