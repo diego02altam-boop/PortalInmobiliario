@@ -1,0 +1,24 @@
+@model PortalInmobiliario.Models.Inmueble
+@{
+    ViewData["Title"] = Model.Titulo;
+}
+
+<h2>@Model.Titulo</h2>
+
+<div class="row">
+    <div class="col-md-7">
+        <img class="img-fluid rounded mb-3" src="@(Model.Imagen ?? "https://via.placeholder.com/960x540?text=Inmueble")" />
+    </div>
+    <div class="col-md-5">
+        <h4>@Model.Precio.ToString("C0")</h4>
+        <p class="mb-1"><strong>@Model.Ciudad</strong> — @Model.Direccion</p>
+        <p>@Model.MetrosCuadrados m² • @Model.Dormitorios Hab • @Model.Banos Baños</p>
+
+        <a class="btn btn-primary" asp-area="" asp-controller="Inmuebles" asp-action="Index">Volver al catálogo</a>
+
+        <hr />
+        <div class="alert alert-secondary">
+            Próximo paso (P3): aquí aparecerá el formulario <strong>Agendar visita</strong> y el botón <strong>Reservar ahora</strong>.
+        </div>
+    </div>
+</div>

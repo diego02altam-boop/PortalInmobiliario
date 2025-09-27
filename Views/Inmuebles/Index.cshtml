@@ -1,0 +1,114 @@
+@model PortalInmobiliario.Models.ViewModels.CatalogoVM
+@using PortalInmobiliario.Models
+@{
+    ViewData["Title"] = "Catálogo";
+    var ciudades = Model.Resultados.Select(r => r.Ciudad)
+                    .Concat(new[] { "Bogotá","Jamundí","Rionegro","Barranquilla" }) // fallback
+                    .Distinct().OrderBy(x => x).ToList();
+}
+
+<h2 class="mb-3">Venta de inmuebles</h2>
+
+<form method="get" class="row g-2 mb-3">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="col-sm-3">
+        <label class="form-label">Ciudad</label>
+        <select class="form-select" asp-for="Filtros.Ciudad">
+            <option value="">(Todas)</option>
+            @foreach (var c in ciudades) { <option value="@c" selected="@(Model.Filtros.Ciudad==c)">@c</option> }
+        </select>
+    </div>
+
+    <div class="col-sm-3">
+        <label class="form-label">Tipo</label>
+        <select class="form-select" asp-for="Filtros.Tipo"
+                asp-items="Html.GetEnumSelectList<TipoInmueble>()">
+            <option value="">(Todos)</option>
+        </select>
+    </div>
+
+    <div class="col-sm-2">
+        <label class="form-label">Precio mín.</label>
+        <input class="form-control" asp-for="Filtros.PrecioMin" />
+        <span asp-validation-for="Filtros.PrecioMin" class="text-danger"></span>
+    </div>
+
+    <div class="col-sm-2">
+        <label class="form-label">Precio máx.</label>
+        <input class="form-control" asp-for="Filtros.PrecioMax" />
+        <span asp-validation-for="Filtros.PrecioMax" class="text-danger"></span>
+    </div>
+
+    <div class="col-sm-2">
+        <label class="form-label">Dormitorios ≥</label>
+        <input class="form-control" asp-for="Filtros.Dormitorios" />
+        <span asp-validation-for="Filtros.Dormitorios" class="text-danger"></span>
+    </div>
+
+    <div class="col-12">
+        <button class="btn btn-primary mt-2">Filtrar</button>
+    </div>
+</form>
+
+@if (!Model.Resultados.Any())
+{
+    <div class="alert alert-info">No hay inmuebles para los filtros seleccionados.</div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+        @foreach (var i in Model.Resultados)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <img class="card-img-top" src="@(i.Imagen ?? "https://via.placeholder.com/640x360?text=Inmueble")" alt="@i.Titulo" />
+                    <div class="card-body">
+                        <h5 class="card-title">@i.Titulo</h5>
+                        <p class="card-text mb-1"><strong>@i.Ciudad</strong> — @i.Direccion</p>
+                        <p class="card-text">
+                            @i.MetrosCuadrados m² • @i.Dormitorios Hab • @i.Banos Baños
+                        </p>
+                        <h6 class="text-primary">@(i.Precio.ToString("C0"))</h6>
+                        <a asp-action="Details" asp-route-id="@i.Id" class="btn btn-outline-primary btn-sm">
+                            Ver detalle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Paginación simple -->
+    <nav class="mt-3">
+        <ul class="pagination">
+            @{
+                int current = Model.Filtros.Page;
+                int total = Model.TotalPages;
+                string qs(string k, object v) =>
+                    Microsoft.AspNetCore.WebUtilities.QueryHelpers.AddQueryString("",
+                        new Dictionary<string, string?>{
+                            ["Ciudad"]=Model.Filtros.Ciudad,
+                            ["Tipo"]=Model.Filtros.Tipo?.ToString(),
+                            ["PrecioMin"]=Model.Filtros.PrecioMin?.ToString(),
+                            ["PrecioMax"]=Model.Filtros.PrecioMax?.ToString(),
+                            ["Dormitorios"]=Model.Filtros.Dormitorios?.ToString(),
+                            ["Page"]=v.ToString()!,
+                            ["PageSize"]=Model.Filtros.PageSize.ToString()
+                        });
+            }
+            <li class="page-item @(current<=1?"disabled":"")">
+                <a class="page-link" href="@qs("Page", current-1)">Anterior</a>
+            </li>
+            @for (int p = 1; p <= total; p++)
+            {
+                <li class="page-item @(p==current?"active":"")">
+                    <a class="page-link" href="@qs("Page", p)">@p</a>
+                </li>
+            }
+            <li class="page-item @(current>=total?"disabled":"")">
+                <a class="page-link" href="@qs("Page", current+1)">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+}

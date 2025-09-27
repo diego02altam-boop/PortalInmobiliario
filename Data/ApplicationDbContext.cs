@@ -6,7 +6,7 @@ namespace PortalInmobiliario.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) {}
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
     public DbSet<Inmueble> Inmuebles => Set<Inmueble>();
     public DbSet<Visita> Visitas => Set<Visita>();
@@ -25,5 +25,10 @@ public class ApplicationDbContext : IdentityDbContext
 
         b.Entity<Visita>()
             .HasCheckConstraint("CK_Visita_Rango", "FechaInicio < FechaFin");
+            
+             b.Entity<Inmueble>()
+        .Property(i => i.Precio)
+        .HasConversion<double>();
     }
+    
 }
