@@ -33,6 +33,38 @@
                     <partial name="_LoginPartial" />
                 </div>
             </div>
+            @using Microsoft.EntityFrameworkCore
+@inject PortalInmobiliario.Data.ApplicationDbContext Db
+
+<ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Inmuebles" asp-action="Index">Comprar</a>
+    </li>
+
+    @* 👇 Atajo al último inmueble visto *@
+    @{
+        var id = Context.Session.GetInt32("UltimoInmuebleId");
+        if (id.HasValue)
+        {
+            var titulo = Db.Inmuebles.AsNoTracking()
+                           .Where(i => i.Id == id.Value)
+                           .Select(i => i.Titulo)
+                           .FirstOrDefault();
+            if (!string.IsNullOrEmpty(titulo))
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-primary" asp-controller="Inmuebles" asp-action="Details" asp-route-id="@id.Value">
+                        Volver a @titulo
+                    </a>
+                </li>
+            }
+        }
+    }
+</ul>
+
         </nav>
     </header>
     <div class="container">
